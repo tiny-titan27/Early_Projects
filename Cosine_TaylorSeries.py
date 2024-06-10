@@ -11,7 +11,7 @@ def cosine_taylor_series(a, r):
         f = f + (-1) ** (count) * x ** (count*2) / sympy.factorial((count*2))
         count += 1
     f = f.subs(x, r)
-    print(f)
+    return(f)
 
 
 cosine_taylor_series(4, 1)
