@@ -11,7 +11,7 @@ def sine_taylor_series(a, r):
         f = f + (-1) ** (count+1) * x ** (count*2-1) / sympy.factorial((count*2-1))
         count += 1
     f = f.subs(x, r)
-    print(f)
+    return(f)
 
 
 sine_taylor_series(10, 1)
