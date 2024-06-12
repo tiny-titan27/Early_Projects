@@ -3,10 +3,9 @@
 # This script uses the sine and cosine scripts as references. For fun.
 
 import sympy
-
+x = sympy.Symbol('x')
 
 def cosine_taylor_series(a, r):
-    x = sympy.Symbol('x')
     f = 1
     count = 1
     # The while loop determines the resulting series expansion. The r value is the input for x.
@@ -18,7 +17,6 @@ def cosine_taylor_series(a, r):
 
 
 def sine_taylor_series(a, r):
-    x = sympy.Symbol('x')
     f = 0
     count = 1
     # The while loop determines the resulting series expansion. The r value is the input for x.
@@ -43,6 +41,6 @@ def projectile_motion(h, v_i, deg, g=9.81):
     max_height = (v_y/g)*v_y/2 + h
     print("The projectile spends ", time_in_air, "seconds in the air, and reaches a maximum height of ", max_height,
           "meters, landing ", distance_land, "meters away from the launch point.")
-
+    sympy.plotting.plot(-g/2 * x ** 2 + v_y * x + h, (x, 0, time_in_air))
 
 projectile_motion(30, 1000, 0)
