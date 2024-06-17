@@ -6,7 +6,7 @@ t = sympy.Symbol('t')
 
 
 def mass_on_spring_y(h, k, m):
-    w = (k/m)**1/2
+    w = (k/m) ** (1 / 2)
     y = h * sympy.cos(w*t)
     T = 2*sympy.pi/w
     print("The oscillations have a period of ", T, "seconds.")
@@ -17,7 +17,7 @@ mass_on_spring_y(5, 1, 3)
 
 
 def mass_on_spring_v(h, k, m):
-    w = (k / m) ** 1 / 2
+    w = (k / m) ** (1 / 2)
     T = 2 * sympy.pi / w
     v = -w * h * sympy.sin(w * t)
     print("The mass has a maximum velocity of ", w*h, "meters per second.")
@@ -25,7 +25,7 @@ def mass_on_spring_v(h, k, m):
 
 
 def mass_on_spring_a(h, k, m):
-    w = (k / m) ** 1 / 2
+    w = (k / m) ** (1 / 2)
     y = h * sympy.cos(w * t)
     T = 2 * sympy.pi / w
     a = -w ** 2 * h * sympy.cos(w * t)
